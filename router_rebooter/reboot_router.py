@@ -6,8 +6,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
-load_dotenv()
-
 
 def get_username():
     return os.getenv("ROUTER_USERNAME")
@@ -65,5 +63,6 @@ def reboot_router(driver):
 
 
 if __name__ == "__main__":
+    load_dotenv()
     driver = login()
     reboot_router(driver)
